@@ -1,0 +1,592 @@
+Its my legit but actually semirage so fuck legit shitters use this instead of fully legit cheating bcuz nobody can catch u with that
+
+
+KillSound::bEnableKillSound 0
+HitSound::bEnableHitSound 0
+SkyVar::enableCustomSkybox 1
+SkyVar::selectedSkybox urbannightburning_hdr
+KillSound::sKillSoundPath c:\windows\media\windows ding.wav
+HitSound::sHitSSoundPath c:\windows\media\windows ding.wav
+Vars::AimbotMethod 2
+Vars::Visuals::bGrenadeTracers 0
+Vars::Visuals::bGrenadeTrajectory 0
+Vars::Visuals::bGrenadeLandingZone 0
+Vars::Visuals::bGrenadeDamageInfo 0
+Vars::UseCornerBoxes 0
+Vars::Particles::bEnabled 0
+Vars::Particles::bRainbow 0
+Vars::Particles::CustomColor 148 0 248 255
+Vars::RiceHatESPEnabled 0
+Vars::RiceHatRadius 8
+Vars::RiceHatBaseOffset 65
+Vars::RiceHatTipOffset 5
+Vars::RiceHatColor 255 255 0 255
+Vars::EnableGlowLines 0
+Vars::GlowIntensity 1
+Vars::GlowFalloff 0.35
+Vars::WeaponChamsMode 0
+Vars::WeaponChamsColorMode 255 255 255 255
+Vars::WeaponChamsColorBehindMode 150 150 150 255
+Vars::WeaponChamsColor2Mode 255 255 255 255
+Vars::WeaponChamsColorBehind2Mode 150 150 150 255
+Vars::WeaponMaterialLayer1Mode //platform/materials/debug/env_cubemap_model
+Vars::WeaponMaterialLayer2Mode 
+Vars::WeaponDualMaterialMode 0
+Vars::RainbowWeaponChamsMode 0
+Vars::RainbowWeaponChamsSpeedMode 0.5
+Vars::WeaponChamsIgnoreZMode 0
+Vars::WeaponOverlayMode 0
+Vars::UseAimwareESP 1
+Vars::InfectedGhost_Enabled 0
+Vars::InfectedGhost_Box 0
+Vars::InfectedGhost_Skeleton 0
+Vars::InfectedGhost_Name 0
+Vars::InfectedGhost_Health 0
+Vars::InfectedGhost_HealthBar 0
+Vars::InfectedGhost_FillBox 0
+Vars::InfectedGhost_Weapon 0
+Vars::InfectedGhost_States 0
+Vars::InfectedGhost_BoxColor 128 0 128 255
+Vars::InfectedGhost_SkeletonColor 192 192 192 255
+Vars::InfectedGhost_FillColor 64 0 64 128
+Vars::Infected_Enabled 1
+Vars::Infected_Box 0
+Vars::Infected_Skeleton 0
+Vars::Infected_Name 0
+Vars::Infected_Health 1
+Vars::Infected_HealthBar 1
+Vars::Infected_FillBox 0
+Vars::Infected_Weapon 0
+Vars::Infected_States 0
+Vars::Infected_Boomer_BoxColor 255 128 0 255
+Vars::Infected_Boomer_SkeletonColor 255 200 100 255
+Vars::Infected_Boomer_FillColor 128 64 0 128
+Vars::Infected_Hunter_BoxColor 255 128 0 255
+Vars::Infected_Hunter_SkeletonColor 255 200 100 255
+Vars::Infected_Hunter_FillColor 128 64 0 128
+Vars::Infected_Smoker_BoxColor 255 128 0 255
+Vars::Infected_Smoker_SkeletonColor 255 200 100 255
+Vars::Infected_Smoker_FillColor 128 64 0 128
+Vars::Infected_Jockey_BoxColor 255 128 0 255
+Vars::Infected_Jockey_SkeletonColor 255 200 100 255
+Vars::Infected_Jockey_FillColor 128 64 0 128
+Vars::Infected_Spitter_BoxColor 255 128 0 255
+Vars::Infected_Spitter_SkeletonColor 255 200 100 255
+Vars::Infected_Spitter_FillColor 128 64 0 128
+Vars::Infected_Charger_BoxColor 255 128 0 255
+Vars::Infected_Charger_SkeletonColor 255 200 100 255
+Vars::Infected_Charger_FillColor 128 64 0 128
+Vars::Infected_Tank_BoxColor 0 128 255 255
+Vars::Infected_Tank_SkeletonColor 100 200 255 255
+Vars::Infected_Tank_FillColor 0 64 128 128
+Vars::Infected_Witch_BoxColor 0 128 255 255
+Vars::Infected_Witch_SkeletonColor 100 200 255 255
+Vars::Infected_Witch_FillColor 0 64 128 128
+Vars::Infected_Witch_RageBar 0
+Vars::Survivor_Enabled 1
+Vars::Survivor_Box 0
+Vars::Survivor_Skeleton 0
+Vars::Survivor_Name 0
+Vars::Survivor_Health 1
+Vars::Survivor_HealthBar 1
+Vars::Survivor_FillBox 0
+Vars::Survivor_Weapon 0
+Vars::Survivor_States 0
+Vars::Survivor_BoxColor 0 150 255 255
+Vars::Survivor_SkeletonColor 100 200 255 255
+Vars::Survivor_FillColor 0 75 128 128
+Vars::Common_Enabled 0
+Vars::Common_Box 0
+Vars::Common_Skeleton 0
+Vars::Common_Name 0
+Vars::Common_FillBox 0
+Vars::Common_States 0
+Vars::Common_BoxColor 255 0 0 255
+Vars::Common_SkeletonColor 255 100 100 255
+Vars::Common_FillColor 128 0 0 128
+Vars::Weapon_Box 0
+Vars::Weapon_IconESP 0
+Vars::Weapon_Name 0
+Vars::Weapon_FillBox 0
+Vars::Weapon_FillColor 0 50 0 128
+Vars::DefaultWeaponColor 100 255 100 255
+Vars::AntiOBS_Weapon_NameColor 255 255 255 255
+Vars::Survivor_EntityName 0
+Vars::Infected_EntityName 1
+Vars::Survivor_HealthBarColor 19 255 1 255
+Vars::Infected_HealthBarColor 5 244 221 255
+Vars::InfectedGhost_HealthBarColor 128 128 128 255
+SpecialItems_Count 0
+WeaponBlacklist_Count 0
+Vars::HeavenLines 0
+Vars::EnableThirdPerson 0
+Vars::EnableFreeLook 0
+Vars::EnableThirdPersonESP 0
+Vars::ThirdPersonForward -37.1
+Vars::ThirdPersonRight 0
+Vars::ThirdPersonUp 0
+Vars::ThirdPersonKey.m_Var 50
+Vars::FreeLookKey.m_Var 0
+Vars::World::NightMode 0
+Vars::World::NightIntensity 50
+Vars::World::WorldChams 0
+Vars::World::WorldChamsColor 100 100 100 255
+World::Fogcolor 0.54902 0.996078 0.780392
+Vars::World::Fogdensity 0.2
+Vars::World::FoguseRainbow 0
+Vars::World::FograinbowSpeed 4
+Vars::Removals::NoSpread 0
+Vars::Removals::NoSpreadHannibal 1
+Vars::Removals::NoRecoil 0
+Vars::Removals::NoVisualRecoil 1
+Vars::Removals::BoomerVisual 1
+Vars::FunnyChams 0
+Vars::FunnyChamsColor 255 128 128 255
+Vars::FunnyChamsColorBehind 255 0 0 255
+Vars::FunnyChamsIgnoreZ 0
+Vars::FunnyDualMaterial 0
+Vars::FunnyChamsColor2 255 255 255 255
+Vars::FunnyChamsColorBehind2 255 0 0 255
+Vars::RainbowFunnyChams 0
+Vars::RainbowFunnyChamsSpeed 1
+Vars::FunnyMaterialLayer1 debug/debugambientcube
+Vars::FunnyMaterialLayer2 
+Vars::FunnyOverlay 0
+Vars::WeaponChams 0
+Vars::WeaponChamsColor 255 128 128 255
+Vars::WeaponChamsColorBehind 255 0 0 255
+Vars::WeaponChamsIgnoreZ 1
+Vars::WeaponDualMaterial 0
+Vars::WeaponChamsColor2 255 255 255 255
+Vars::WeaponChamsColorBehind2 255 0 0 255
+Vars::RainbowWeaponChams 0
+Vars::RainbowWeaponChamsSpeed 1
+Vars::WeaponMaterialLayer1 debug/debugambientcube
+Vars::WeaponMaterialLayer2 
+Vars::WeaponOverlay 0
+Vars::EnableAim 0
+Vars::EnableNoSpread 0
+Vars::EnableAutoShove 0
+Vars::EnableAutoShoot 0
+Vars::IgnoreCommons 0
+Vars::AutoUseOnRevive 0
+Vars::MovementMode 1
+Vars::SpeedHackEnabled 0
+Chams::HandChams 1
+Chams::HandChamsColor 255 0 0 255
+Chams::HandChamsIgnoreZ 0
+Chams::HandChamsColorBehind 255 0 0 255
+Chams::RainbowHandChams 0
+Chams::RainbowHandChamsSpeed 1
+Chams::HandChamsAnimSpeed 5
+Chams::HandChamsScale 1
+Chams::MaterialLayer13 //platform/materials/debug/env_cubemap_model
+Chams::Weapons 0
+Chams::WeaponsColor 255 0 0 255
+Chams::WeaponsIgnoreZ 0
+Chams::WeaponsColorBehind 255 0 0 255
+Chams::RainbowWeaponsModel 0
+Chams::RainbowWeaponsSpeed 1
+Chams::Weapons2 1
+Chams::WeaponsColor2 108 68 159 255
+Chams::WeaponsIgnoreZ2 0
+Chams::WeaponsColorBehind2 255 0 0 255
+Chams::RainbowWeaponsModel2 0
+Chams::RainbowWeaponsSpeed2 1
+Chams::MaterialLayer1 ___wireframe_dx9_5
+Chams::SkyChams 1
+Chams::SkyChamsColor 0 255 123 255
+Chams::Overlay 0
+Chams::IgnoreSurvivors 0
+Chams::IgnorePlayerInfected 0
+Chams::PlayerOverlay 0
+Chams::HandOverlay 0
+Chams::WeaponOverlay 0
+Chams::Weapon2Overlay 0
+Chams::SelfChams 0
+Chams::SelfChamsIgnoreZ 0
+Chams::SelfOverlay 0
+Chams::RainbowSelfChams 0
+Chams::SelfChamsColor 255 255 255 255
+Chams::SelfChamsColorBehind 255 0 0 255
+Chams::RainbowSelfChamsSpeed 1
+Chams::MaterialLayer14 
+Chams::SelfDualMaterial 0
+Chams::SelfChamsColor2 0 255 0 255
+Chams::SelfChamsColorBehind2 255 0 0 255
+Chams::MaterialLayer14_2 debug/debugambientcube
+Chams::PlayerDualMaterial 0
+Chams::PlayerColor2 0 255 0 255
+Chams::PlayerColorBehind2 255 0 0 255
+Chams::PlayerInfectedColor2 255 0 255 255
+Chams::PlayerInfectedBehind2 0 255 255 255
+Chams::MaterialLayer12_2 debug/debugambientcube
+Chams::HandDualMaterial 0
+Chams::HandChamsColor2 0 255 0 255
+Chams::HandChamsColorBehind2 255 0 0 255
+Chams::MaterialLayer13_2 debug/debugambientcube
+Chams::WeaponDualMaterial 0
+Chams::WeaponsColor22 0 255 0 255
+Chams::WeaponsColorBehind22 255 0 0 255
+Chams::MaterialLayer1_2 debug/debugambientcube
+Chams::Weapon2DualMaterial 1
+Chams::WeaponsColor2_2 0 0 0 255
+Chams::WeaponsColorBehind2_2 255 0 0 255
+F::CvarsConfig::AspectRatioEnable 1
+F::CvarsConfig::FullBrightEnable 0
+F::CvarsConfig::FullFlashlightEnable 0
+F::CvarsConfig::AspectRatioValue 1
+F::CvarsConfig::AspectRatioValueInt 0
+F::Misc::DisableInterp 0
+F::Misc::EnableRapidFire 0
+Vars::EnablePolarisRapidFire 0
+Vars::Enable_NoFall 0
+Vars::Enable_NoSmokerDamage 0
+Vars::Enable_NoIncapDamage 0
+F::Misc::EnableChargerturn 0
+F::Misc::EnableModsOnline 0
+F::Misc::EnableSpeedhack 0
+F::Misc::EnableLagExploit 1
+F::Misc::RapidFireValue 46
+Vars::RapidFireValuePolaris 0
+F::Misc::LagExploitValue 373
+F::Misc::RapidKey.m_Var 70
+Vars::RapidKeyPolaris.m_Var 70
+F::Misc::SpeedKey.m_Var 70
+F::Misc::LagExploitKey.m_Var 81
+Settings::EnableAirStuck 0
+Settings::AirStuck.m_Var 0
+Vars::EnableTP 0
+Vars::TeleportK.m_Var 0
+F::Ignore::IgnoreWitchUntilStartled 1
+F::Ignore::IgnoreFriends 1
+F::Ignore::IgnoreTeammates 1
+F::Ignore::IgnoreCommons 1
+F::Hitscan::bInterpOptimize 0
+F::Hitscan::bVelocityExtrapolate 0
+F::Hitscan::bEnableExtrapolation 0
+F::Hitscan::bExtrapolateWithPing 0
+F::Hitscan::bExtrapolateSpeedhackers 0
+F::Hitscan::iExtrapolationTicks 1
+F::Hitscan::bAutoPistol 0
+F::Hitscan::bEnable 0
+F::Hitscan::bAutoShoot 0
+F::Hitscan::bKey 1
+F::Hitscan::bSilentAim 0
+F::Hitscan::iFov 18
+F::Hitscan::MaxPlayers 2
+F::Hitscan::iHitbox 0
+F::Hitscan::AimKey.m_Var 18
+F::Hitscan::bToggleAim 0
+F::Hitscan::ToggleKeyAim.m_Var 114
+F::Hitscan::MultiPointIfNoHitboxesAreVisible 0
+F::Hitscan::AimFovCircle 0
+F::Hitscan::bFovGlow 0
+F::Hitscan::AimFov 255 255 255 255
+F::Hitscan::bEnableSmooth.m_Var 0
+F::Hitscan::fSmoothAmount.m_Var 5
+F::Hitscan::bTargetHead 1
+F::Hitscan::bTargetNeck 0
+F::Hitscan::bTargetChest 0
+F::Hitscan::bTargetStomach 0
+F::Hitscan::bTargetArms 0
+F::Hitscan::bTargetLegs 0
+F::Hitscan::bMultiPoint 0
+F::Hitscan::fMultiPointRadius 3
+F::Hitscan::iMultiPointCount 5
+F::Hitscan::bAllowInfectedAimbot 0
+F::Hitscan::bCorrectMovement 1
+F::Hitscan::fFovRadius 100
+F::HitscanHannibal::fFovRadius 100
+F::IgnoreHannibal::IgnoreWitchUntilStartled 0
+F::IgnoreHannibal::IgnoreFriends 0
+F::IgnoreHannibal::IgnoreTeammates 1
+F::IgnoreHannibal::IgnoreCommons 0
+F::HitscanHannibal::bEnginePrediction 1
+F::HitscanHannibal::bOptimizedHitbox 1
+F::HitscanHannibal::bPrioritizePlayers 1
+F::HitscanHannibal::bUsePenetration 1
+F::HitscanHannibal::bEnable 0
+F::HitscanHannibal::bAutoShoot 0
+F::HitscanHannibal::bKey 0
+F::HitscanHannibal::bSilentAim 0
+F::HitscanHannibal::iFov 180
+F::HitscanHannibal::bFovGlow 0
+F::HitscanHannibal::AimKey.m_Var 1
+F::HitscanHannibal::bToggleAim 0
+F::HitscanHannibal::ToggleKeyAim.m_Var 114
+F::HitscanHannibal::AimFovCircle 0
+F::HitscanHannibal::AimFov 255 255 255 255
+F::HitscanHannibal::bEnableSmooth.m_Var 0
+F::HitscanHannibal::fSmoothAmount.m_Var 1
+F::HitscanHannibal::bCorrectMovement 1
+F::HitscanHannibal::bHead 1
+F::HitscanHannibal::bChest 0
+F::HitscanHannibal::bStomach 0
+F::HitscanHannibal::bLimbs 0
+F::StormAim::bEnable 0
+F::StormAim::AimKey.m_Var 0
+F::StormAim::ToggleKey.m_Var 0
+F::StormAim::bAutoShoot 1
+F::StormAim::bAutoShove 0
+F::StormAim::bNoSpread 1
+F::StormAim::bIgnoreCommons 0
+F::StormAim::bIgnoreTeammates 1
+F::StormAim::bShotgunShove 0
+F::StormAim::bRiotDeprioritize 0
+F::StormAim::bPrioritizeFOV 0
+F::StormAim::iPenetrationDamage 0
+F::StormAim::iTargetOnSimulation 0
+F::StormAim::iFov 180
+F::StormAim::bFovCircle 0
+F::StormAim::bFovGlow 0
+F::StormAim::AimFov 255 255 255 180
+Interface_Extra_Commands.Integer 40
+Interface_Extra_Commands_Action.Integer 0
+Interface_Interpolate_Extra_Commands.Integer 1
+Interface_Target_On_Simulation.Integer 0
+Interface_Shotgun_Shove.Integer 0
+Interface_Riot_Deprioritize.Integer 0
+Interface_Penetrate_Teammates.Integer 0
+Interface_Aim_Intersection.Integer 0
+Interface_Penetration_Damage.Integer 0
+Interface_Equipment_Distance.Floating_Point 2048
+Interface_Uber_Alles_Scale.Integer 16
+Interface_Uber_Alles_Speed.Integer 192
+Vars::CrosshairColor 0 128 255 255
+Vars::Enable_Custom_Crosshair 0
+Interface_CustomViewModelX.Floating_Point 7.6
+Interface_CustomViewModelY.Floating_Point -3.8
+Interface_CustomViewModelZ.Floating_Point -10.3
+GlowVar::Enabled 1
+GlowVar::LocalEnabled 0
+GlowVar::SurvivorEnabled 1
+GlowVar::InfectedEnabled 1
+GlowVar::GhostEnabled 1
+GlowVar::LocalColor 255 255 255 255
+GlowVar::SurvivorColor 0 255 0 255
+GlowVar::InfectedColor 87 0 246 255
+GlowVar::GhostColor 255 255 255 150
+g_SpectatorList.enabled 0
+g_SpectatorList.alwaysShow 0
+Vars::Misc::FakelagEnable 0
+Vars::Misc::FakelagAlways 0
+Vars::Misc::FakelagKeyToggle.m_Var 0
+Vars::Misc::FakelagKeyHold.m_Var 0
+Vars::Misc::FakelagAmount 8
+g_SpectatorList.position.x 10
+g_SpectatorList.position.y 10
+Settings::EnableOOFCommons 0
+Settings::CommonsOOFArrowColor 255 255 255 255
+Settings::CircleOOFArrowsCommons 0
+Settings::bOOFArrowsAlwaysShowCommons 0
+Settings::outOfFOVArrowsDistanceCommons 350
+Settings::outOfFOVArrowsSizeCommons 25
+Settings::EnableOOFSurvivors 0
+Settings::SurvivorsOOFArrowColor 255 255 255 255
+Settings::CircleOOFArrowsSurvivors 0
+Settings::bOOFArrowsAlwaysShowSurvivors 0
+Settings::outOfFOVArrowsDistanceSurvivors 350
+Settings::outOfFOVArrowsSizeSurvivors 25
+Settings::EnaleOOFInfecteds 1
+Settings::InfectedsOOFArrowColor 142 115 224 255
+Settings::CircleOOFArrowsUInfecteds 0
+Settings::bOOFArrowsAlwaysShowInfecteds 0
+Settings::outOfFOVArrowsDistanceInfecteds 287.629
+Settings::outOfFOVArrowsSizeInfecteds 20.928
+Settings::EnableSNAPLINESCommons 0
+Settings::CommonsSnaplinesColor 255 255 255 255
+Settings::EnableBorderOulineSnaplinesCommons 0
+Settings::EnableSNAPLINESSurvivors 0
+Settings::SurvivorsSnalpinesColor 255 255 255 255
+Settings::EnableBorderOulineSnaplinesSurvivors 0
+Settings::EnaleSNAPLINESInfecteds 0
+Settings::InfectedSnaplinesColor 255 255 255 255
+Settings::EnableBorderOulineSnaplinesInfecteds 0
+F::VarsChatSpammer::bEnable 0
+F::VarsChatSpammer::bUseNewlines 0
+F::VarsChatSpammer::fSpeed 1
+F::VarsChatSpammer::sCustomMessage :)
+F::VarsChatSpammer::sNewlineAdvertise OWNED
+Vars::AntiOBS 0
+Vars2::FogController.bEnable 0
+Vars2::FogController.bNoFog 0
+Vars2::FogController.bCustomFog 1
+Vars2::FogController.blend 0
+Vars2::FogController.primaryColor 1 1 1 0
+Vars2::FogController.secondaryColor 1 1 1 0
+Vars2::FogController.dirPrimary 0 0 1
+Vars2::FogController.start 50
+Vars2::FogController.end 1000
+Vars2::FogController.maxDensity 1
+Vars::AntiOBS_Survivor_Enabled 0
+Vars::AntiOBS_Survivor_Box 0
+Vars::AntiOBS_Survivor_Skeleton 0
+Vars::AntiOBS_Survivor_Name 0
+Vars::AntiOBS_Survivor_Health 1
+Vars::AntiOBS_Survivor_HealthBar 1
+Vars::AntiOBS_Survivor_FillBox 0
+Vars::AntiOBS_Survivor_Weapon 0
+Vars::AntiOBS_Survivor_States 0
+Vars::AntiOBS_Common_Enabled 0
+Vars::AntiOBS_Common_Box 0
+Vars::AntiOBS_Common_Skeleton 0
+Vars::AntiOBS_Common_FillBox 0
+Vars::AntiOBS_Common_States 0
+Vars::AntiOBS_Common_Name 0
+Vars::AntiOBS_Infected_Enabled 0
+Vars::AntiOBS_Infected_Box 0
+Vars::AntiOBS_Infected_Skeleton 0
+Vars::AntiOBS_Infected_Name 0
+Vars::AntiOBS_Infected_Health 1
+Vars::AntiOBS_Infected_HealthBar 1
+Vars::AntiOBS_Infected_FillBox 0
+Vars::AntiOBS_Infected_Weapon 0
+Vars::AntiOBS_Infected_States 0
+Vars::AntiOBS_InfectedGhost_Enabled 0
+Vars::AntiOBS_InfectedGhost_Box 0
+Vars::AntiOBS_InfectedGhost_Skeleton 0
+Vars::AntiOBS_InfectedGhost_Name 0
+Vars::AntiOBS_InfectedGhost_Health 0
+Vars::AntiOBS_InfectedGhost_HealthBar 0
+Vars::AntiOBS_InfectedGhost_FillBox 0
+Vars::AntiOBS_InfectedGhost_Weapon 0
+Vars::AntiOBS_InfectedGhost_States 0
+Vars::AntiOBS_Weapon_Enabled 1
+Vars::AntiOBS_Weapon_Box 0
+Vars::AntiOBS_Weapon_Name 1
+Vars::AntiOBS_Weapon_FillBox 0
+Vars::EnableAutoCeiling 0
+Vars::CeilingKey.m_Var 0
+Vars::EnableSilentCeiling 0
+Vars::UseRandomCeiling 0
+Vars::EnableAutoClicker 0
+Vars::DisableSmoothingForCeiling 0
+Vars::CeilingSmoothness 1
+Vars::NameStealer::AutoUpdateNames 0
+Vars::NameStealer::SilentNameSteal 0
+Vars::NameStealer::IgnoreBots 0
+Vars::EnableCustomModel 0
+Vars::SelectedCustomModel models/infected/boomer.mdl
+Vars::SelectedModelIndex 0
+RadarVars::Enabled 0
+RadarVars::PositionX 10
+RadarVars::PositionY 10
+RadarVars::Size 200
+RadarVars::Zoom 0.1
+RadarVars::Alpha 0.85
+RadarVars::ShowLocalPlayer 1
+RadarVars::ShowSurvivors 1
+RadarVars::ShowInfected 1
+RadarVars::ShowGhost 1
+RadarVars::ShowCommons 0
+RadarVars::ShowWeapons 0
+RadarVars::LocalPlayerColor 255 255 255 255
+RadarVars::SurvivorColor 0 150 255 255
+RadarVars::InfectedColor 255 50 50 255
+RadarVars::GhostColor 150 150 150 200
+RadarVars::CommonColor 255 0 0 200
+RadarVars::WeaponColor 255 255 0 200
+RadarVars::BackgroundColor 5 5 5 217
+RadarVars::BorderColor 255 255 255 255
+RadarVars::GridColor 40 40 40 150
+F::Triggerbot::bEnable 0
+F::Triggerbot::TriggerKey.m_Var 6
+F::Triggerbot::bToggle 0
+F::Triggerbot::bHead 0
+F::Triggerbot::bChest 0
+F::Triggerbot::bStomach 0
+F::Triggerbot::bLimbs 0
+F::Triggerbot::iDelay 0
+F::Triggerbot::IgnoreCommons 0
+F::HitscanLegit::fFovRadius 92
+F::HitscanLegit::bEnginePrediction 0
+F::HitscanLegit::bOptimizedHitbox 1
+F::HitscanLegit::bPrioritizePlayers 1
+F::HitscanLegit::fPenetrationDamage 1
+F::HitscanLegit::bUsePenetration 1
+F::HitscanLegit::bEnable 1
+F::HitscanLegit::bAutoShoot 0
+F::HitscanLegit::bKey 0
+F::HitscanLegit::bSilentAim 0
+F::HitscanLegit::iFov 16
+F::HitscanLegit::bFovGlow 0
+F::HitscanLegit::AimKey.m_Var 1
+F::HitscanLegit::bToggleAim 0
+F::HitscanLegit::ToggleKeyAim.m_Var 114
+F::HitscanLegit::AimFovCircle 0
+F::HitscanLegit::AimFov 255 255 255 255
+F::HitscanLegit::bEnableSmooth.m_Var 1
+F::HitscanLegit::fSmoothAmount.m_Var 1
+F::HitscanLegit::bCorrectMovement 1
+F::HitscanLegit::bHead 1
+F::HitscanLegit::bChest 0
+F::HitscanLegit::bStomach 0
+F::HitscanLegit::bLimbs 0
+F::IgnoreLegit::IgnoreWitchUntilStartled 1
+F::IgnoreLegit::IgnoreFriends 0
+F::IgnoreLegit::IgnoreTeammates 1
+F::IgnoreLegit::IgnoreCommons 1
+Vars::Removals::NoSpreadLegit 1
+Vars::StormMisc 0
+g_KeybindList.enabled 0
+g_KeybindList.position.x 10
+g_KeybindList.position.y 200
+ChatSpy::iChatSpyMode 3
+Vars::EnableWatermark 0
+Spotify::EnableSpotifyControls 0
+Spotify::EnableSpotifyOverlay 0
+Spotify::PreviousTrackKey.m_Var 0
+Spotify::NextTrackKey.m_Var 0
+Spotify::PlayPauseKey.m_Var 0
+Spotify::RewindKey.m_Var 0
+Spotify::FastForwardKey.m_Var 0
+Spotify::VolumeDownKey.m_Var 0
+Spotify::VolumeUpKey.m_Var 0
+GlowVar::CommonEnabled 0
+GlowVar::CommonColor 255 100 255 255
+GlowVar::WeaponEnabled 0
+GlowVar::WeaponColor 200 200 200 255
+GlowVar::WitchEnabled 0
+GlowVar::WitchColor 255 150 255 255
+GlowVar::TankEnabled 0
+GlowVar::TankColor 255 100 0 255
+Chams::Survivors 0
+Chams::SurvivorsIgnoreZ 0
+Chams::SurvivorOverlay 0
+Chams::SurvivorDualMaterial 0
+Chams::RainbowSurvivorsModel 0
+Chams::RainbowSurvivorsSpeed 1
+Chams::SurvivorColor 0 255 150 255
+Chams::SurvivorColorBehind 0 255 150 150
+Chams::SurvivorColor2 0 200 100 255
+Chams::SurvivorColorBehind2 0 200 100 150
+Chams::MaterialLayerSurvivor1 
+Chams::MaterialLayerSurvivor2 
+Chams::Infected 1
+Chams::InfectedIgnoreZ 1
+Chams::InfectedOverlay 0
+Chams::InfectedDualMaterial 0
+Chams::RainbowInfectedModel 0
+Chams::RainbowInfectedSpeed 1
+Chams::InfectedColor 188 0 243 255
+Chams::InfectedColorBehind 0 54 255 150
+Chams::InfectedColor2 200 10 80 255
+Chams::InfectedColorBehind2 200 10 80 150
+Chams::MaterialLayerInfected1 debug/debugambientcube
+Chams::MaterialLayerInfected2 
+Vars::Survivor_WeaponIcon 0
+Vars::AntiOBS_Survivor_WeaponIcon 0
+Vars::Enable_Interpolate_Hook 0
+Vars::MenuScaleMultiplier 1.23
+Vars::NeedFontReload 0
+Vars::PendingScaleChange 0
+Vars::PendingScale 1.23
+Vars::MenuRounding 0
+Vars::MenuOpacity 0.85
+Vars::BackgroundImageOpacity 0.4
+Vars::EnableFireBulletsAim 0
+Vars::EnableFireBulletsAutoShoot 0
+Vars::EnableFireBulletsNoSpread 0
+Vars::FireBulletsIgnoreCommons 0
+Vars::FireBulletsIgnoreTeammates 1
