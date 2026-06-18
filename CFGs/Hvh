@@ -332,9 +332,9 @@ F::StormAim::bIgnoreTeammates 1
 F::StormAim::bShotgunShove 0
 F::StormAim::bRiotDeprioritize 1
 F::StormAim::bPrioritizeFOV 0
-F::StormAim::iPenetrationDamage 100
-F::StormAim::iTargetOnSimulation 20
-F::StormAim::iFov 180
+F::StormAim::iPenetrationDamage 19
+F::StormAim::iTargetOnSimulation 0
+F::StormAim::iFov 0
 F::StormAim::bFovCircle 0
 F::StormAim::bFovGlow 0
 F::StormAim::AimFov 255 255 255 180
