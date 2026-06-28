@@ -1,0 +1,14 @@
+function on_create_move(cmd, local_player)
+    if not local_player or not local_player:is_alive() then return end
+
+    local buttons = cmd:get_buttons()
+    
+    if (buttons / 32) % 2 >= 1 then
+        return 
+    end
+
+    local angles = cmd:get_viewangles()
+    angles.x = -89.0
+    cmd:set_viewangles(angles)
+end
+
