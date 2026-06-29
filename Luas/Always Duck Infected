@@ -1,0 +1,36 @@
+-- Author: murayefeskamus
+if client.get_shared_bool("XQD7PL9", nil) == nil then
+    client.set_shared_bool("XQD7PL9", false)
+end
+
+function on_create_move(cmd, local_player)
+    if not cmd or not local_player then
+        return
+    end
+
+    if not local_player:is_alive() then
+        return
+    end
+
+    if client.get_shared_bool("XQD7PL9", false) then
+        if local_player:get_team() == team.INFECTED or local_player:is_zombie() then
+            local IN_DUCK = 4
+            local current_buttons = cmd:get_buttons()
+            
+            cmd:set_buttons(current_buttons | IN_DUCK)
+        end
+    end
+end
+
+menu.add_main_tab("Movement Utilities", function()
+    imgui.text("FORTHEDUCKWARRIORS")
+    imgui.separator()
+
+    local changed, val = imgui.checkbox("Always Duck (Infected Only)", client.get_shared_bool("XQD7PL9", false))
+    if changed then 
+        client.set_shared_bool("XQD7PL9", val) 
+    end
+
+    imgui.separator()
+    imgui["end"]()
+end)
