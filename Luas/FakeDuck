@@ -1,0 +1,59 @@
+-- Author: murayefeskamus
+if client.get_shared_bool("Z7_FD_M", nil) == nil then
+    client.set_shared_bool("Z7_FD_M", false)
+end
+
+local function LK8_W()
+
+    local O9_C = 0
+    
+    return function(cmd, local_player)
+        if not client.get_shared_bool("Z7_FD_M", false) then 
+            O9_C = 0
+            return 
+        end
+
+        local IN_DUCK = 4
+        local buttons = cmd:get_buttons()
+
+        O9_C = O9_C + 1
+
+        if O9_C <= 7 then
+            buttons = buttons | IN_DUCK
+            cmd:set_buttons(buttons)
+            client.set_send_packet(false)
+            
+        elseif O9_C <= 14 then
+            buttons = buttons & ~IN_DUCK 
+            cmd:set_buttons(buttons)
+            client.set_send_packet(false)
+            
+        else
+            client.set_send_packet(true)
+            O9_C = 0
+        end
+    end
+end
+
+local T9_X = LK8_W()
+
+function on_create_move_prediction(cmd, local_player)
+    if not cmd or not local_player or not local_player:is_alive() then
+        return
+    end
+
+    T9_X(cmd, local_player)
+end
+
+menu.add_main_tab("Movement Utilities", function()
+    imgui.text("Movement Utilities")
+    imgui.separator()
+
+    local changed, val = imgui.checkbox("Fake Duck", client.get_shared_bool("Z7_FD_M", false))
+    if changed then 
+        client.set_shared_bool("Z7_FD_M", val) 
+    end
+
+    imgui.separator()
+    imgui["end"]()
+end)
