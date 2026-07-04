@@ -1,0 +1,247 @@
+local cfg = {
+    snow       = true,
+    snow_c     = 300,
+    snow_sz    = 2.0,
+    snow_sp    = 35.0,
+    snow_w     = 8.0,
+    snow_r     = 0.90, 
+    snow_g     = 0.95, 
+    snow_b     = 1.00,
+
+    rain       = false,
+    rain_c     = 600,
+    rain_len   = 20.0,
+    rain_sp    = 250.0,
+    rain_w     = 15.0,
+    rain_r     = 0.50, 
+    rain_g     = 0.65, 
+    rain_b     = 0.90,
+}
+
+local S_RAD = 500
+local S_TOP = 320
+
+local SP = {} 
+local RP = {} 
+local DT, LAST_T = 0, os.clock()
+
+local function rf(a, b) 
+    return a + math.random() * (b - a) 
+end
+
+local function clamp(v, lo, hi) 
+    return math.max(lo, math.min(hi, v)) 
+end
+
+local function get_screen_coords(world_pos)
+    if not engine.world_to_screen_matrix then return nil end
+
+    local mat_ptr = engine.world_to_screen_matrix()
+    if not mat_ptr or mat_ptr == 0 then return nil end
+
+    local function read_mat(idx)
+        return memory.read_float(mat_ptr + (idx * 4))
+    end
+
+    local ok, m00 = pcall(read_mat, 0)
+    if not ok then return nil end
+    local m01 = read_mat(1); local m02 = read_mat(2); local m03 = read_mat(3)
+    local m10 = read_mat(4); local m11 = read_mat(5); local m12 = read_mat(6); local m13 = read_mat(7)
+    local m30 = read_mat(12); local m31 = read_mat(13); local m32 = read_mat(14); local m33 = read_mat(15)
+
+    local w = m30 * world_pos.x + m31 * world_pos.y + m32 * world_pos.z + m33
+    if w < 0.001 then return nil end 
+
+    local inv_w = 1.0 / w
+    local screen_x = (m00 * world_pos.x + m01 * world_pos.y + m02 * world_pos.z + m03) * inv_w
+    local screen_y = (m10 * world_pos.x + m11 * world_pos.y + m12 * world_pos.z + m13) * inv_w
+
+    local width, height = engine.get_screen_size()
+    local x = (width / 2) + (screen_x * width / 2)
+    local y = (height / 2) - (screen_y * height / 2)
+
+    return { x = math.floor(x), y = math.floor(y) }
+end
+
+local function dist_a(p, eye, near, far)
+    local dx = p.pos.x - eye.x
+    local dy = p.pos.y - eye.y
+    local dz = p.pos.z - eye.z
+    return clamp(1 - (math.sqrt(dx*dx + dy*dy + dz*dz) - near) / (far - near), 0, 1)
+end
+
+local function particle_init(p, eye, rand_h)
+    p.pos  = {
+        x = eye.x + rf(-S_RAD, S_RAD),
+        y = eye.y + rf(-S_RAD, S_RAD),
+        z = eye.z + (rand_h and rf(-200, S_TOP) or rf(S_TOP * 0.7, S_TOP)) 
+    }
+    p.sz   = p.pos.z
+    p.mf   = rf(350, 650)
+    p.sm   = rf(0.5, 1.5)
+end
+
+function on_paint()
+    if not engine.is_in_game() then return end
+
+    local now = os.clock()
+    DT     = math.min(now - LAST_T, 0.1)
+    LAST_T = now
+
+    local local_player = client.get_local_player()
+    if not local_player then return end
+
+    local eye = local_player:get_eye_position()
+    if not eye then return end
+
+    if cfg.snow then
+        while #SP < cfg.snow_c do 
+            local p = {}; particle_init(p, eye, true); SP[#SP+1] = p 
+        end
+        while #SP > cfg.snow_c do SP[#SP] = nil end
+
+        for _, p in ipairs(SP) do
+            p.pos.z = p.pos.z - cfg.snow_sp * p.sm * DT
+            p.pos.x = p.pos.x + cfg.snow_w * DT
+            
+            local lf = (p.sz - p.pos.z) / p.mf
+            if lf >= 1 then particle_init(p, eye, false) end
+
+            local sp = get_screen_coords(p.pos)
+            if sp then
+                local da = dist_a(p, eye, 200, 600)
+                local bf = math.min(lf / 0.10, 1)
+                local df = lf < 0.80 and 1 or (1 - (lf - 0.80) / 0.20)
+                local a  = 0.80 * da * bf * df 
+
+                if a > 0.01 then
+                    local px, py = sp.x, sp.y
+                    local sz = math.max(1, math.floor(cfg.snow_sz * p.sm))
+
+                    pcall(function()
+                        draw.circle(px, py, sz, 8, cfg.snow_r, cfg.snow_g, cfg.snow_b, a)
+                    end)
+                end
+            end
+        end
+    else
+        if #SP > 0 then SP = {} end
+    end
+
+    if cfg.rain then
+        while #RP < cfg.rain_c do 
+            local p = {}; particle_init(p, eye, true); RP[#RP+1] = p 
+        end
+        while #RP > cfg.rain_c do RP[#RP] = nil end
+
+        for _, p in ipairs(RP) do
+            p.pos.z = p.pos.z - cfg.rain_sp * p.sm * DT
+            p.pos.x = p.pos.x + cfg.rain_w * DT
+            
+            local lf = (p.sz - p.pos.z) / p.mf
+            if lf >= 1 then particle_init(p, eye, false) end
+
+            local sp = get_screen_coords(p.pos)
+            if sp then
+                local top_pos = {
+                    x = p.pos.x - (cfg.rain_w * 0.2), 
+                    y = p.pos.y,
+                    z = p.pos.z + (cfg.rain_len * p.sm)
+                }
+                
+                local sp_top = get_screen_coords(top_pos)
+                if sp_top then
+                    local da = dist_a(p, eye, 200, 600)
+                    local bf = math.min(lf / 0.10, 1)
+                    local df = lf < 0.80 and 1 or (1 - (lf - 0.80) / 0.20)
+                    local a  = 0.50 * da * bf * df 
+
+                    if a > 0.01 then
+                        pcall(function()
+                            draw.line(math.floor(sp.x), math.floor(sp.y), math.floor(sp_top.x), math.floor(sp_top.y), cfg.rain_r, cfg.rain_g, cfg.rain_b, a)
+                        end)
+                    end
+                end
+            end
+        end
+    else
+        if #RP > 0 then RP = {} end
+    end
+end
+
+
+menu.add_main_tab("Weather", function()
+    imgui.text("3D Weather System (Snow & Rain)")
+    imgui.separator()
+    imgui.spacing()
+
+    local changed, val
+    
+    changed, val = imgui.checkbox("Enable Snow", cfg.snow)
+    if changed then cfg.snow = val end
+
+    if cfg.snow then
+        if imgui.begin_child("SnowBox", 0, 220, true, 0) then
+            imgui.text(" Snow Settings")
+            imgui.separator()
+
+            changed, val = imgui.slider_int("Count##sn", cfg.snow_c, 0, 1500)
+            if changed then cfg.snow_c = val end
+
+            changed, val = imgui.slider_float("Size##sn", cfg.snow_sz, 0.5, 5.0)
+            if changed then cfg.snow_sz = val end
+
+            changed, val = imgui.slider_float("Fall Speed##sn", cfg.snow_sp, 5.0, 150.0)
+            if changed then cfg.snow_sp = val end
+
+            changed, val = imgui.slider_float("Wind Force##sn", cfg.snow_w, -100.0, 100.0)
+            if changed then cfg.snow_w = val end
+
+            imgui.spacing()
+            imgui.text("Color:")
+            changed, val = imgui.slider_float("R##snr", cfg.snow_r, 0.0, 1.0)
+            if changed then cfg.snow_r = val end
+            changed, val = imgui.slider_float("G##sng", cfg.snow_g, 0.0, 1.0)
+            if changed then cfg.snow_g = val end
+            changed, val = imgui.slider_float("B##snb", cfg.snow_b, 0.0, 1.0)
+            if changed then cfg.snow_b = val end
+
+            imgui.end_child()
+        end
+    end
+
+    imgui.spacing()
+
+    changed, val = imgui.checkbox("Enable Rain", cfg.rain)
+    if changed then cfg.rain = val end
+
+    if cfg.rain then
+        if imgui.begin_child("RainBox", 0, 220, true, 0) then
+            imgui.text("Rain Settings")
+            imgui.separator()
+
+            changed, val = imgui.slider_int("Count##rn", cfg.rain_c, 0, 2500)
+            if changed then cfg.rain_c = val end
+
+            changed, val = imgui.slider_float("Drop Length##rn", cfg.rain_len, 5.0, 50.0)
+            if changed then cfg.rain_len = val end
+
+            changed, val = imgui.slider_float("Fall Speed##rn", cfg.rain_sp, 50.0, 500.0)
+            if changed then cfg.rain_sp = val end
+
+            changed, val = imgui.slider_float("Wind Force##rn", cfg.rain_w, -200.0, 200.0)
+            if changed then cfg.rain_w = val end
+
+            imgui.spacing()
+            imgui.text("Color:")
+            changed, val = imgui.slider_float("R##rnr", cfg.rain_r, 0.0, 1.0)
+            if changed then cfg.rain_r = val end
+            changed, val = imgui.slider_float("G##rng", cfg.rain_g, 0.0, 1.0)
+            if changed then cfg.rain_g = val end
+            changed, val = imgui.slider_float("B##rnb", cfg.rain_b, 0.0, 1.0)
+            if changed then cfg.rain_b = val end
+
+            imgui.end_child()
+        end
+    end
+end)
